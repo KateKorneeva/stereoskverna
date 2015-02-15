@@ -1,0 +1,545 @@
+body {
+  /*background-color: #bbdcd5;*/
+  background-color: #000;
+}
+
+.blacksmoke {
+  /*background: #181818 url(../img/smokeblack.jpg) center top;*/
+  background: #000;
+  background-size: 100% 100%;
+  width: inherit;
+  max-width: 1400px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.graysmoke {
+  /*background: #181818 url(../img/smokegray.jpg) center top;*/
+  background: #000;
+  background-size: 100% 101.5%;
+  width: inherit;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px;
+}
+
+.container {    
+
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  /*background-color: #181818;*/
+  background-color: #000;
+  width: 85%;
+  min-width: 1000px;
+  max-width: 1000px;
+}
+
+.container p {
+  text-align: justify;
+}
+
+.blackheader {
+  height: 830px;
+  background-color: #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  vertical-align: top;
+  width: 85%;
+  min-width: 700px;
+}
+
+.logo {
+  background-color: #000;
+  width: 100%;
+  height: 120px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo img {
+  width: inherit;
+}
+
+.face {
+  background-color: #000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 55px; 
+  padding-right: 55px;
+  height: 600px;
+}
+.face > img {
+  height: inherit;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.faceright {
+  float: right;
+}
+
+::selection {
+  background: #aaa;
+  width: 60%;
+}
+
+.main {
+
+  margin-top: 90px;
+  margin: 8%;
+  margin-bottom: 0;
+  color: #aaa;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+.main h1 {
+  color: #aaa;
+  /*text-shadow: 0 0 0.1em #677;*/
+  /*font-size: 1.5em;*/
+  text-align: center;
+}
+hr {
+  background-color: #666;
+  height: 2px;
+  border: none;
+}
+
+.footer {
+  float: right; 
+  color: #777;
+  padding-bottom: 20px;
+  padding-top: 50px;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.contend {
+  height: 100px;
+}
+
+.albumline {
+  position: absolute;
+  top: 22px;
+  left: 65px;
+  width: 165px;
+  height: 0;
+  border-top: 2px dashed #90F5E9;
+
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+.album {
+  position: relative;
+  height: 70px;
+  margin-top: 10px;
+  border-bottom: 2px solid #90F5E9;
+  padding-bottom: 5px;
+}
+
+.album-end {
+  height: 20px;
+}
+
+.cover-end {
+  width: 71px;
+  display: inline-block;
+  margin-left: 9px;
+}
+
+.album-name-end {
+  display: inline-block;
+  border-left: 2px solid #90F5E9;
+  height: 20px;
+}
+
+.end-end {
+
+  margin-left: -13px;
+  margin-bottom: -10px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #90F5E9;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+:focus {
+  outline: none;
+}
+
+element.style {
+  width: none;
+  height: none;
+}
+
+.hidden {
+  display: none;
+}
+.dot.visible {
+  display: inline-block;
+}
+
+.nowplay {
+  color: #abc;
+  font-size: 14px;
+  background-color: #000;
+}
+
+
+.spoil {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #c3c3c3;
+  border-left: 6px solid #c3c3c3;
+  margin: 15px 0 15px 0;
+  height: 24px;
+}
+
+.spoil .sp_text {
+  margin: 40px 10px 10px 10px;
+  }
+
+.spoil .sp_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background: rgba(195, 195, 195, 0.1);
+  border-bottom: 1px solid #c3c3c3;
+  display: table;
+}
+
+.spoil .sp_span {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 0 0 20px;
+}
+
+.spoil .sp_button {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  border: 1px solid #c3c3c3;
+  background: #fff;
+}
+
+.spoil .sp_button:hover {
+  box-shadow: inset 0 0 3px #ffd800;
+}
+
+.albums {
+  position: relative;
+  left: 110px;
+  display: inline-block;
+  padding-top: 68px;
+}
+
+.albums p{
+  list-style: none;
+  cursor: pointer;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  /* This is really important to set vertical stripes*/
+  margin-top: 18px;
+}
+
+.albums .header.disabled {
+  color: #345;
+  cursor:default;
+}
+
+.albumBeg
+{
+  position: absolute;
+  top: 70px;
+  left: -10px;
+}
+.albumEnd {
+  position: absolute;
+  top: 70px;
+  left: 350px;
+}
+
+.cover {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.smImg {
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+}
+
+.albumName {
+  display: inline-block;
+  border-left: 2px solid #90F5E9;
+  padding-left: 20px;
+  padding-right: 10px;
+  height: 65px;
+}
+
+.playlistBox {
+  display: table;
+  position: relative;
+  top: -60px;
+  right: 120px;
+  float: right;
+  width: 290px;
+  height: 550px;
+}
+
+.playlist {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.comTop, .comBot{
+  position: relative;
+  width: 15px;
+  float: left;
+  border-top: 2px dashed #90F5E9;
+}
+
+.comTop{
+  top: 0;
+}
+.comBot {
+  bottom: 2px;
+}
+
+.list {
+
+  border-left: 2px dashed #90F5E9;
+  padding-left: 15px;
+
+}
+
+.list li {
+  margin-left: 20px;
+  min-width: 160px;
+  display: block;
+  text-decoration: none;
+  line-height: 1.9em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #000;
+}
+
+.list, .list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li:hover{
+  cursor: pointer;
+}
+.list ul:hover{
+  cursor: default;
+}
+
+.transline {
+  position: absolute;
+  top: 75px;
+  left: 360px;
+  width: 110px;
+  border-bottom: 2px dashed #90F5E9;
+}
+
+.songHlineBeg {
+  position: absolute;
+  top: -7px;
+  left: -10px;
+}
+.songHline {
+  position: absolute;
+  top: 248px;
+  left: 300px;
+  width: 20px;
+  border-top: 2px dashed #90F5E9;
+}
+
+.songVline {
+  position: absolute;
+  top: -35px;
+  left: 318px;
+  height: 285px;
+  border-right: 2px dashed #90F5E9;
+}
+
+.songLongline {
+  position: absolute;
+  top: -35px;
+  left: -90px;
+  width: 410px;
+  border-top: 2px dashed #90F5E9; 
+}
+
+.songDline {
+  position: absolute;
+  top: -105px;
+  left: -140px;
+  width: 100px;
+  border-top: 2px dashed #90F5E9; 
+
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+.musik {
+  position: relative;
+  top: 120px;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: 800px;
+
+  padding-top: 30px;
+
+  font-size: 1.25em;
+  line-height: 2.4em;
+  color: #90F5E9;
+}
+
+.player {
+  width: 200px;
+  display: block;
+  margin-left: 30%;
+}
+
+li.underlined {
+  border-bottom: 2px solid #90F5E9;
+}
+
+.gallery {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: 200px;
+  overflow: auto;
+}
+
+.gallery a {
+  text-decoration:none;
+}
+
+.gallery .item {
+  height: 250px; 
+  overflow: hidden;
+  float: left;
+  margin: 20px;
+}
+
+.gallery .item.item2 {
+
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.gallery .item.item9, 
+.gallery .item.item10, 
+.gallery .item.item11 {
+  margin-left: 25px;
+}
+
+
+
+.gallery .item a { 
+  overflow: hidden;
+}
+
+.gallery .item a img {
+  height: 100%; 
+  align-self: center;
+}
+
+
+.lightbox {
+  /** Hide the lightbox */
+  display: none;
+
+  /** Apply basic lightbox styling */
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: black;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  /** Pad the lightbox image */
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 3%;
+}
+
+.lightbox:target {
+  /** Show lightbox when it is target */
+  display: block;
+
+  /** Remove default browser outline style */
+  outline: none;
+}
+
+.lightbox .image {
+  max-width:80%;
+  height: 100%;
+  margin:0 auto;
+}
+
+.lightbox .info {
+  width: 220px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}   
+
+.lightbox a {
+  text-decoration: none;
+}
+
+.close {
+  padding:5px;
+  margin-top: 3px;
+  color: #90F5E9;
+  font-weight: bold;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 40%;
+}
+.prev {
+  height: 60px;
+  width: 60px;
+  background: url('../img/gallery/prev.png') no-repeat center;
+  left: 8%;
+}
+.next {
+  height: 60px;
+  width: 60px;
+  right: 8%;
+  background: url('../img/gallery/next.png') no-repeat center;
+}

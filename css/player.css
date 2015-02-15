@@ -1,0 +1,56 @@
+.loader {
+  width: 180px;
+  height: 180px;
+  background-color: #000;
+  border-radius: 50%;
+  border: solid 3px #90F5E9;
+
+}
+.loader .circle .mask,
+.loader .circle .fill {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  border-radius: 50%;
+  transition: -webkit-transform 0.5s;
+  transition: -ms-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-backface-visibility: hidden;
+}
+.loader .circle .mask {
+  clip: rect(0px, 180px, 180px, 90px);
+}
+.loader .circle .mask .fill {
+  clip: rect(0px, 90px, 180px, 0px);
+  background-color: #567;
+}
+
+.overlay {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 12px;
+  background-color: #000;
+  border: #90F5E9 solid 12px;
+}
+
+.songPlayPause {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  margin-left: 51px;
+  margin-top: 51px;
+  border-radius: 50%;
+  border: 2px solid #90F5E9;
+
+}
+
+.playButton {
+  background: #000 url('../img/player/play.png') no-repeat center;
+}
+
+.pauseButton {
+  background: #000 url('../img/player/pause.png') no-repeat center;
+}

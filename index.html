@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Stereo Skverna</title>    
+
+    <script type="text/javascript" src="js/lib/jquery-1.7.2.min.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/box.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/player.css">
+    
+    <script src="js/albums.js"></script>      
+    <script src="js/player.js"></script>
+    <script src="js/gallery.js"></script>
+  </head>
+
+  <body>        
+    <div class="blacksmoke">
+
+      <div class="blackheader">
+
+        <div class="logo">
+          <img src="logopng.png">
+        </div>
+  
+        <div class="face">                
+          <img src="1left.jpg">
+          <img class="faceright" src="1right.jpg">
+        </div> 
+
+        <div class="facegrad"></div>
+      </div>
+    </div>
+
+    <div class="graysmoke">
+
+      <div class="container">
+
+        <div class="musik">
+           
+          <div class="player">
+
+            <div class="loader">
+              <div class="circle">
+                <div class="mask full">
+                  <div class="fill"></div>
+                </div>
+                <div class="mask half">
+                  <div class="fill"></div>
+                  <div class="fill fix"></div>
+                </div>
+                <div class="overlay"></div>
+              </div>
+              <div class="songPlayPause playButton"></div>
+            </div>
+          </div>
+
+          <div class="albums" id="albums">
+            <div class="album">
+              <div class="albumBeg dot"></div>
+              <div class="cover">
+                <a href="#mechImg">
+                  <img class="smImg" src="./img/covers/mechsm.jpg">
+                </a>
+              </div>
+              <div class="albumName">
+                <p class="mech header">Mechanical Illusion (2012)</p>
+              </div>
+              <div class="albumEnd dot mechlist hidden"></div>
+              <div class="transline mechlist hidden"></div>            
+            </div>
+
+            <div class = "album">
+              <div class="albumBeg dot"></div>
+              <div class="cover">
+                <a href="#kaltImg">
+                  <img class="smImg" src="./img/covers/kaltsm.jpg">
+                </a>
+              </div>
+              <div class="albumName">
+                <p class="kalt header">Kalt Berlin (2014) Single</p>
+              </div>
+              <div class="albumEnd dot kaltlist hidden"></div>
+              <div class="transline kaltlist hidden"></div>            
+            </div>
+
+            <div class="album">
+              <div class="albumBeg dot"></div>
+              <div class="cover">
+                <div class="smImg"></div>
+              </div>
+              <div class="albumName">
+                <p class="coming header disabled">Coming Soon</p>
+              </div>              
+            </div>
+
+            <div class="album-end">
+              <div class="cover-end"></div>
+              <div class="album-name-end"></div>
+              <div class="end-end dot"></div>
+            </div>
+
+            <div class="albumline"></div>
+
+          </div>
+
+          <audio id="song" ontimeupdate = "updateTime()">
+            <source id="songmp3" src="audio/mech/1.mp3" type="audio/mp3"/>
+            <source id = "songogg" src="audio/mech/2.ogg" type="audio/ogg"/>
+          </audio>
+          <!-- Div that updates with current song time while playing -->
+          <div id="songTime" class="hidden">0:00 / 0:00</div>
+          <div class="playlistBox">
+            <div class="playlist">
+              <ul class="mechlist list hidden">
+                <div class="comTop"></div>
+                <li>01 - Obliged Forever</li>
+                <li>02 - The Epoch</li>
+                <li>03 - Nuclear Strike</li> 
+                <li>04 - Mechanical Worm</li>
+                <li>05 - Skverna</li>
+                <li>06 - Illusion of Life</li>
+                <li>07 - Our Kult</li>
+                <li>08 - Face the Love</li>
+                <li>09 - You are leading me (feat Kirill Astapov)</li><div class="comBot"></div>
+              </ul>
+              <ul class="kaltlist list hidden">
+                <div class="comTop"></div>
+                <li>01 - Kalt Berlin [instrumental]</li>
+                <li>02 - Nordsee [instrumental]</li>
+                <li>03 - Kaisertanz [Single song]</li>
+                <li>04 - Ohne Mühe [Single song]</li><div class="comBot"></div>
+              </ul>     
+              <div class="songHline line hidden">
+                <div class="songHlineBeg dot"></div>
+              </div>
+              <div class="songVline line hidden"></div>
+              <div class="songLongline line hidden"></div>
+              <!-- <div class="songDline"></div> -->
+            </div>
+          </div>
+        </div>
+        <!-- end of .musik -->     
+
+        <div class="lightbox" id="mechImg">
+          <div class="image">
+            <img src="./img/covers/mechbig.jpg">
+            <div class="info">
+              <a href="#albums"><div class="close">close</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="kaltImg">
+          <div class="image">
+            <img src="./img/covers/kaltbig.jpg">
+            <div class="info">
+              <a href="#albums"><div class="close">close</div></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lightbox" id="galImg1">
+          <div class="image">
+            <img src="./img/gallery/gallery1.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            </div>
+            <a href="#galImg2"><div class="next"></div></a>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg2">
+          <a href="#galImg1"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery2.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg3"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg3">
+          <a href="#galImg2"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery3.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg4"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg4">
+          <a href="#galImg3"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery4.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg5"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg5">
+          <a href="#galImg4"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery5.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg6"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg6">
+          <a href="#galImg5"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery6.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg7"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg7">
+          <a href="#galImg6"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery7.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg8"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg8">
+          <a href="#galImg7"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery8.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg9"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg9">
+          <a href="#galImg8"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery9.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg10"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg10">
+          <a href="#galImg9"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery10.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            <a href="#galImg11"><div class="next"></div></a>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox" id="galImg11">
+          <a href="#galImg10"><div class="prev"></div></a>
+          <div class="image">
+            <img src="./img/gallery/gallery11.jpg">
+            <div class="info">
+              <a href="#gallery"><div class="close">close</div></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="main">
+          <hr> 
+          <br />
+          <br />
+          <br />
+          <h1>About Project</h1>
+          <br />
+          <br />
+          <br />
+          <p>Founded in 2009 by Korneev "YoGuRT" Sergey. The name of the project reflects the image of human morality decay in the epoch of industrial progress and global development. Including such subjects as Love and War, this project comes laden with incredible electronic symphonies, filled with the strongest cosmic scale atmosphere, that overwhelms the listener, giving no chance to escape the ocean of deep and illusion breaking emotions.</p>
+          <br />
+          <p><b>Mechanic Illusion</b> album was created in classical industrial-rock style with the use of heavy guitar riffs and foot tapping electronic's combined with beautifully complex russian language.</p>
+          <br />
+          <p>The single <b>Kalt Berlin</b> 2014 is presented on this website in the run-up to the release of the new album! In the authors opinion, all the power and strength of the Great Germany and it`s Capital is enclosed in the single <b>Kalt Berlin</b> in original instrumental format (without vocal).</p>
+          <br />
+          <p>The new album is released in the nearest future. It is more stylistically close to Neue Deutsche Härte. Spellbinding electronics, classical for this stylistics drum bits, beautiful power atmosphere - what else a true music-lover needs!</p>
+          <br />
+          <p>On this website you can listen to all Stereo Skverna project songs absolutely free for examination.</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <hr>                  
+          <br />                  
+          <p>Ladies and gentelmen. We are happy to intoroduce you the STEREO SKVERNA.</p>
+          <br />
+          <br />
+          <br />
+          <br />                  
+          <br />
+          <br />
+          <br />
+          <br />
+        </div> 
+
+        <div class="gallery" id="gallery">
+          <div class="item">
+            <a href="#galImg1">
+              <img class="galImg" src="./img/gallery/sgallery1.jpg">
+            </a>
+          </div>        
+          <div class="item item2">
+            <a href="#galImg2">
+              <img class="galImg" src="./img/gallery/sgallery2.jpg">
+            </a>
+          </div>        
+          <div class="item">
+            <a href="#galImg3">
+              <img class="galImg" src="./img/gallery/sgallery3.jpg">
+            </a>
+          </div>        
+          <div class="item">
+            <a href="#galImg4">
+              <img class="galImg" src="./img/gallery/sgallery4.jpg">
+            </a>
+          </div>        
+          <div class="item">
+            <a href="#galImg5">
+              <img class="galImg" src="./img/gallery/sgallery5.jpg">
+            </a>
+          </div>        
+          <div class="item">
+            <a href="#galImg6">
+              <img class="galImg" src="./img/gallery/sgallery6.jpg">
+            </a>
+          </div>        
+          <div class="item">
+            <a href="#galImg7">
+              <img class="galImg" src="./img/gallery/sgallery7.jpg">
+            </a>
+          </div>        
+          <div class="item">
+            <a href="#galImg8">
+              <img class="galImg" src="./img/gallery/sgallery8.jpg">
+            </a>
+          </div>        
+          <div class="item item9">
+            <a href="#galImg9">
+              <img class="galImg" src="./img/gallery/sgallery9.jpg">
+            </a>
+          </div>        
+          <div class="item item10">
+            <a href="#galImg10">
+              <img class="galImg" src="./img/gallery/sgallery10.jpg">
+            </a>
+          </div>        
+          <div class="item item11">
+            <a href="#galImg11">
+              <img class="galImg" src="./img/gallery/sgallery11.jpg">
+            </a>
+          </div>        
+        </div>
+
+
+        <div class="footer">
+
+          <!-- <hr> -->
+          <p>E-mail: yogurt@stereoskverna.com</p>
+          <p>Twitter: STEREO SKVERNA</p>
+          <p>Facebook: www.facebook.com/s.skverna</p>
+          <hr>
+          <i>Copyright 2014. STEREO SKVERNA.  All Rights Reserved.</i>
+          <br />
+        </div>
+      </div>
+      <!-- end of container -->
+      <div class="contend"></div>
+
+
+    </div>
+    
+  </body>
+</html>
